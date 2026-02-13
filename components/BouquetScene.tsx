@@ -71,6 +71,7 @@ export default function BouquetScene({ onRotate, isCarouselOpen }: { onRotate: (
             snap={false}
             polar={[0, 0]} 
             azimuth={[-Infinity, Infinity]}
+            damping={0.25}
           >
             <RotationReporter onRotate={onRotate} />
           </PresentationControls>
