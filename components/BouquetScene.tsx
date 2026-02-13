@@ -67,7 +67,7 @@ export default function BouquetScene({ onRotate, isCarouselOpen }: { onRotate: (
           
           <PresentationControls 
             global 
-            speed={2} 
+            speed={5} 
             snap={false}
             polar={[0, 0]} 
             azimuth={[-Infinity, Infinity]}
