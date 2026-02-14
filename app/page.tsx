@@ -4,10 +4,12 @@ import BouquetScene from '@/components/BouquetScene';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const MEMORIES = [
-  { id: 1, url: '/photo1.jpg', caption: 'Our first date ❤️' },
-  { id: 2, url: '/photo2.jpg', caption: 'DLSU Study Days 📚' },
-  { id: 3, url: '/photo3.jpg', caption: "Valentine's 2025" },
-  { id: 4, url: '/photo4.jpg', caption: 'Forever to go' },
+  { id: 1, url: '/photo1.jpg', caption: 'Last year\'s Valentines' },
+  { id: 2, url: '/photo2.jpg', caption: 'A birthday to remember' },
+  { id: 3, url: '/photo3.jpg', caption: "First time!" },
+  { id: 4, url: '/photo4.jpg', caption: 'Growth together' },
+  { id: 5, url: '/photo5.jpg', caption: 'Never a boring moment' },
+  { id: 6, url: '/photo6.jpg', caption: 'A year for the books' },
 ];
 
 const BUFFER_RANGE = 2.5; 
@@ -70,7 +72,7 @@ export default function Home() {
               {MEMORIES.map((item) => (
                 <div key={item.id} className="min-w-[300px] aspect-[3/4] bg-white p-3 shadow-2xl rounded-lg flex-shrink-0">
                   <div className="w-full h-[85%] bg-pink-50 rounded-md overflow-hidden flex items-center justify-center">
-                    <span className="text-pink-300">Memory {item.id}</span>
+                    <img src={item.url}/>
                   </div>
                   <p className="mt-4 text-center font-serif text-gray-700 italic border-t pt-2">{item.caption}</p>
                 </div>
@@ -111,15 +113,23 @@ export default function Home() {
                 className="absolute top-4 right-4 text-gray-400 hover:text-pink-500 transition-colors text-xl font-bold"
               >✕</button>
 
-              <div className="relative z-10 font-serif text-gray-800 space-y-4">
+              <div className="relative z-10 font-serif text-gray-800 space-y-4 max-h-128 overflow-y-auto pr-2">
                 <p className="text-lg">Dearest Alexia,</p>
                 <p className="leading-relaxed">
-                  I wanted to write something that lasts a bit longer than a spin on a screen. 
-                  Being with you this past year at DLSU has been the highlight of my time here. 
-                  Thank you for being my study partner, my best friend, and my person.
-                </p>
-                <p className="leading-relaxed">
-                  I'm excited for all the memories we haven't made yet.
+                  Thank you for being the fountain of my joy and the center of my world. In the restlessness of the world, and the complexities of my days, you are the melody that makes sense of it all. Through you, I find a clarity I never knew existed and a direction that leads me exactly where I need to be.	
+                  <br/>
+                  <br/>
+                  You are the light that pierces my world of heavy clouds. Undoubtedly, even small conversations and moments become worthy of remembrance and cherish. Throughout the past year, I found myself constantly in awe of the elegance you carry, a fact you often deny. 
+                  <br/>
+                  <br/>
+                  I am deeply grateful for the way you treat me, for the way you believe in my dreams, and for your constant choice to be a constant in my life. You have been key in keeping me grounded and inspired throughout all of my endeavors. I would be half the man I am today if it wasn’t for your daily late night conversations and encouragement. I hope that you have truly been delighted with the things that we have done together this past year. From tasting new eats to fulfilling unforgettable dates, you have truly been the beacon of light that lifts up my world. 
+                  <br/>
+                  <br/>
+                  I’m still excited for all the memories we haven’t made yet, for the future sunrises and sunsets we’ll watch together, the challenges we’ll overcome, and many more Valentine’s dates that we’ll spend. I hope that this digital gift provides you with even an inkling of the joy that you have provided me. Thank you for illuminating my life with the flame of your fervent love.
+                  <br/>
+                  <br/>
+                  Happy Valentine's!
+
                 </p>
                 <p className="pt-4 italic">Love, Nathan</p>
               </div>
